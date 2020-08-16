@@ -87,4 +87,5 @@ PizzaBlock.defaultProps = {
   price: 0,
 };
 
+
 export default PizzaBlock;
