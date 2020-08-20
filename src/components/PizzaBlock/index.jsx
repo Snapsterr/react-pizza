@@ -13,7 +13,7 @@ const PizzaBlock = ({ name, imageUrl, price, types, sizes }) => {
   };
   const onSelectSize = (index) => {
     setActiveSize(index);
-  }
+  };
 
   return (
     <div className="pizza-block">
@@ -25,23 +25,23 @@ const PizzaBlock = ({ name, imageUrl, price, types, sizes }) => {
             <li
               key={type}
               onClick={() => onSelectType(index)}
-              className={classNames({ 
-                  active: activeType === index,
-                  disabled: !types.includes(index),
-               })}>
+              className={classNames({
+                active: activeType === index,
+                disabled: !types.includes(index),
+              })}>
               {type}
             </li>
           ))}
         </ul>
         <ul>
-        {availableSizes.map((size, index) => (
+          {availableSizes.map((size, index) => (
             <li
               key={size}
               onClick={() => onSelectSize(index)}
-              className={classNames({ 
-                  active: activeSize === index,
-                  disabled: !sizes.includes(size),
-               })}>
+              className={classNames({
+                active: activeSize === index,
+                disabled: !sizes.includes(size),
+              })}>
               {size} см.
             </li>
           ))}
@@ -70,7 +70,7 @@ const PizzaBlock = ({ name, imageUrl, price, types, sizes }) => {
 };
 
 PizzaBlock.propTypes = {
-  id: PropTypes.number.isRequired,  
+  id: PropTypes.number.isRequired,
   imageUrl: PropTypes.string.isRequired,
   name: PropTypes.string,
   types: PropTypes.arrayOf(PropTypes.number),
@@ -86,6 +86,5 @@ PizzaBlock.defaultProps = {
   types: [],
   price: 0,
 };
-
 
 export default PizzaBlock;
