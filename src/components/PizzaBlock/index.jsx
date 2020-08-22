@@ -62,7 +62,6 @@ const PizzaBlock = ({ name, imageUrl, price, types, sizes }) => {
             />
           </svg>
           <span>Добавить</span>
-          <i>2</i>
         </div>
       </div>
     </div>
